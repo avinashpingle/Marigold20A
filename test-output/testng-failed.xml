@@ -1,21 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
-  <test thread-count="5" name="Test(failed)">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
+  <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.testingshastra.regressiontests.LoginTests">
+      <class name="com.testingshastra.cucumber.runner.Runner">
         <methods>
-          <include name="tc_01"/>
+          <include name="runScenario" invocation-numbers="0 1 2"/>
+          <include name="tearDownClass"/>
+          <include name="setUpClass"/>
         </methods>
-      </class> <!-- com.testingshastra.regressiontests.LoginTests -->
-      <class name="com.testingshastra.regressiontests.SpiceJetTests">
-        <methods>
-          <include name="tearDown"/>
-          <include name="verifySignUpForSpiceClubMember"/>
-          <include name="verifyLoginOptionsUnderSpiceClubMembers"/>
-          <include name="setUp"/>
-        </methods>
-      </class> <!-- com.testingshastra.regressiontests.SpiceJetTests -->
+      </class> <!-- com.testingshastra.cucumber.runner.Runner -->
     </classes>
-  </test> <!-- Test(failed) -->
-</suite> <!-- Failed suite [Suite] -->
+  </test> <!-- Default test(failed) -->
+</suite> <!-- Failed suite [Default suite] -->

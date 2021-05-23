@@ -3,13 +3,13 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.testingshastra.pagetests.E2ETests">
+      <class name="com.testingshastra.cucumber.runner.Runner">
         <methods>
-          <include name="tearDown"/>
-          <include name="tc_01"/>
-          <include name="setup"/>
+          <include name="runScenario" invocation-numbers="0 1 2"/>
+          <include name="tearDownClass"/>
+          <include name="setUpClass"/>
         </methods>
-      </class> <!-- com.testingshastra.pagetests.E2ETests -->
+      </class> <!-- com.testingshastra.cucumber.runner.Runner -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
