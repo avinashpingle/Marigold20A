@@ -1,0 +1,12 @@
+2021-May-22 12:43:47 [main] com.testingshastra.keywords.UIKeywords 
+  INFO  Launching browser: chrome
+2021-May-22 12:43:47 [main] com.testingshastra.stepdefinitions.FirstCucumberStepDefinition 
+  INFO  Chrome browser is opened successfully
+2021-May-22 12:43:50 [main] com.testingshastra.keywords.UIKeywords 
+  INFO  Launching url: https://www.facebook.com
+2021-May-22 12:43:50 [main] com.testingshastra.stepdefinitions.FirstCucumberStepDefinition 
+  INFO  Launching Facebook URL
+2021-May-22 12:43:50 [main] com.testingshastra.stepdefinitions.FirstCucumberStepDefinition 
+  INFO  Clicked on Create New Account Button
+2021-May-22 12:43:53 [main] com.testingshastra.keywords.UIKeywords 
+  INFO  Wait is finished
