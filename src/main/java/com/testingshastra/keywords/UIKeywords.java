@@ -6,6 +6,7 @@ import java.util.ArrayList;
 import java.util.List;
 import org.apache.log4j.Logger;
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
@@ -186,5 +187,13 @@ public class UIKeywords {
 		}else {
 			log.info("Element appeared on page");
 		}
+	}
+	
+	public JavascriptExecutor getJavaScriptExecutor() {
+		return (JavascriptExecutor)Constants.driver;
+	}
+	
+	public void executeScript(String script) {
+		getJavaScriptExecutor().executeAsyncScript(script);
 	}
 }

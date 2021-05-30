@@ -11,6 +11,5 @@ public class E2ETests extends TestBase{
 	public void tc_01() {
 		HomePage home = new HomePage();
 		home.waitFor(2);
-		home.moveMouseToLoginOrSignup();
 	}
 }

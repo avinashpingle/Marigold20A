@@ -8,36 +8,29 @@ import org.testng.log4testng.Logger;
 import com.testingshastra.keywords.UIKeywords;
 import com.testingshastra.utilities.Constants;
 
+/**
+ * This class represents all locators and operations on IJmeet homepage
+ * @author avinashpingale
+ *
+ */
 public class HomePage extends UIKeywords{
 	private static final Logger LOG = Logger.getLogger(HomePage.class);
-	@FindBy(css="a#Login")
-	public WebElement loginOrSignUp;
 	
-	@FindBy(css="a#Login+ul>li:nth-child(1)>a")
-	public WebElement spiceClubMembers;
-	
-	@FindBy(css="a[href='Register.aspx']")
-	public WebElement signup;
+	@FindBy(css = "a[href*='register']")
+	private WebElement signupBtn;
 	
 	public HomePage() {
 		PageFactory.initElements(Constants.driver, this);
 	}
 	
-	public void moveMouseToLoginOrSignup() {
-		moveToElement(loginOrSignUp);
-		LOG.info("moved mouse on Login/Signup on homepage");
+	public String getTitle() {
+		return Constants.driver.getTitle();
 	}
 	
-	public void moveMouseToSpiceClubMembers() {
-		moveToElement(spiceClubMembers);
-		LOG.info("Moved mouse on Spiceclub members on homepage");
+	public void clickOnSignupBtn() {
+		signupBtn.click();
+		LOG.info("Clicked on Signup button");
 	}
-
-	public void clickOnSignup() {
-		clickOnElement(signup);
-		LOG.info("Clicked on Signup link");
-	}
-	
 	
 
 }
